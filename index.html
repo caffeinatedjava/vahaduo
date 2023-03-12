@@ -523,12 +523,12 @@ https://github.com/vahaduo/
           fastModeMulti = !fastModeMulti;
           break;        
         case "cyclesX":
-          cyclesX == 16 ? cyclesX = 1 : cyclesX *= 2;
-          elmnt.innerHTML = "cycles&nbsp;-&nbsp;" + cyclesX / 4 + "x";
+          cyclesX == 10000 ? cyclesX = 1 : cyclesX *= 10;
+          elmnt.innerHTML = "cycles&nbsp;-&nbsp;" + cyclesX + "x";
           break;
         case "cyclesXMulti":
-          cyclesXMulti == 16 ? cyclesXMulti = 1 : cyclesXMulti *= 2;
-          elmnt.innerHTML = "cycles&nbsp;-&nbsp;" + cyclesXMulti / 4 + "x";
+          cyclesXMulti == 10000 ? cyclesXMulti = 1 : cyclesXMulti *= 10;
+          elmnt.innerHTML = "cycles&nbsp;-&nbsp;" + cyclesXMulti + "x";
           break;
         case "addDistCol":
           addDistCol == 16 ? addDistCol = 1 : addDistCol *= 2;
