@@ -1093,7 +1093,7 @@ https://github.com/vahaduo/
     function fastMonteCarlo (target, source, targetId, slots, cyclesMultiplier, distColMultiplier, recalculate, sourceNum) {
       let i, j, tempLine, currentSlots, currentPoint, currentDistance, nextSlots, ranking = Array(),
         nextPoint, nextDistance, previousDistance, rankingNum, dimNum = dimensions; 
-      const cycles = Math.ceil(sourceNum * cyclesMultiplier / 4), scores = Array(sourceNum).fill(0),
+      const cycles = Math.ceil(sourceNum * cyclesMultiplier), scores = Array(sourceNum).fill(0),
         result = {target: targetId, distance, scores},
         bigNumber = 100000000000000000;
       if (distColMultiplier) {
