@@ -522,14 +522,6 @@ https://github.com/vahaduo/
           toggleOption(fastModeMulti, "fast&nbsp;mode&nbsp;-&nbsp;");
           fastModeMulti = !fastModeMulti;
           break;        
-        case "cyclesX":
-          cyclesX == 16 ? cyclesX = 1 : cyclesX *= 2;
-          elmnt.innerHTML = "cycles&nbsp;-&nbsp;" + cyclesX / 4 + "x";
-          break;
-        case "cyclesXMulti":
-          cyclesXMulti == 16 ? cyclesXMulti = 1 : cyclesXMulti *= 2;
-          elmnt.innerHTML = "cycles&nbsp;-&nbsp;" + cyclesXMulti / 4 + "x";
-          break;
         case "addDistCol":
           addDistCol == 16 ? addDistCol = 1 : addDistCol *= 2;
           msg = (addDistCol == 1 ? "no" : addDistCol / 8 + "x");
@@ -1090,10 +1082,10 @@ https://github.com/vahaduo/
       return finishIt();
     }
 
-    function fastMonteCarlo (target, source, targetId, slots, cyclesMultiplier, distColMultiplier, recalculate, sourceNum) {
+    function fastMonteCarlo (target, source, targetId, slots, distColMultiplier, recalculate, sourceNum) {
       let i, j, tempLine, currentSlots, currentPoint, currentDistance, nextSlots, ranking = Array(),
         nextPoint, nextDistance, previousDistance, rankingNum, dimNum = dimensions; 
-      const cycles = Math.ceil(sourceNum * cyclesMultiplier / 4), scores = Array(sourceNum).fill(0),
+      const cycles = 300, scores = Array(sourceNum).fill(0),
         result = {target: targetId, distance, scores},
         bigNumber = 100000000000000000;
       if (distColMultiplier) {
