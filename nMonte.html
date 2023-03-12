@@ -476,7 +476,7 @@ https://github.com/vahaduo/
     function fastMonteCarlo (target, source, targetId, slots) {
       let i, j, tempLine, currentSlots, currentPoint, currentDistance, 
         nextSlots, nextPoint, nextDistance, result; 
-      const cycles = sourceNum * 2, scores = Array(sourceNum).fill(0);
+      const cycles = 300, scores = Array(sourceNum).fill(0);
       for (i = 0; i < sourceNum; i++) {
         source[i] = subArray(source[i], target);
       }
