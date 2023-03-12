@@ -14,7 +14,7 @@ https://github.com/vahaduo/
       background-color: #77b1a9;
       font-size: calc(0.5vw + 12px);
       font-family: sans-serif;
-      color: #dadada;
+      color: #c9f0d3;
     }
     nav {
       width: 100%;
@@ -476,7 +476,7 @@ https://github.com/vahaduo/
     function fastMonteCarlo (target, source, targetId, slots) {
       let i, j, tempLine, currentSlots, currentPoint, currentDistance, 
         nextSlots, nextPoint, nextDistance, result; 
-      const cycles = 300, scores = Array(sourceNum).fill(0);
+      const cycles = 50*sourceNum, scores = Array(sourceNum).fill(0);
       for (i = 0; i < sourceNum; i++) {
         source[i] = subArray(source[i], target);
       }
